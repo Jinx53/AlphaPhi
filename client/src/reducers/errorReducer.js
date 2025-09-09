@@ -1,0 +1,28 @@
+import {GET_ERRORS, CLEAR_ERRORS} from "../actions/types";
+
+const initialState = {
+    message: {},
+    status: null,
+    id: null
+}
+
+const errorMessage = (state = initialState, action) => {
+    switch(action.type) {
+        case GET_ERRORS:
+            return {
+                message: action.payload.message,
+                status: action.payload.status,
+                id: action.payload.id
+            };
+        case CLEAR_ERRORS:
+            return {
+                messgae: {},
+                status: null,
+                id: null
+            };
+        default:
+            return state;
+    }
+}
+
+export default errorMessage
