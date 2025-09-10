@@ -5,7 +5,7 @@ const {mailslurp} = require("./auth/aws");
 const path = require('path');
 const { firebaserules_v1 } = require('googleapis');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
-const {user, cpanel_email, cpanel_email_pass, email_host, mailerhost, google_clientId, google_clientSecret, google_accessToken, google_refreshToken} = process.env;
+const {gmail_email, cpanel_email, cpanel_email_pass, email_host, mailerhost, google_clientId, google_clientSecret, google_accessToken, google_refreshToken} = process.env;
 
 
   /** 
@@ -46,7 +46,7 @@ async function googleMailer(mailOptions){
                 type: "OAuth2",
                 clientId: google_clientId,
                 clientSecret: google_clientSecret,
-                user,
+                user: gmail_email,
                 refreshToken: refreshtoken,
                 accessToken: access_token
             }

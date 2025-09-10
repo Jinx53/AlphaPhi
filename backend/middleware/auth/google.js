@@ -53,7 +53,7 @@ function makeEmail({from, to, subject, text}){
     .replace(/=+$/, '');
     return encodedMessage;
 }
-//Send work doesn't work because the email is not a service account - code is correct
+//Send doesn't work because the email is not a service account - code is correct
 async function sendEmail(mailOptions = {from, to, subject, text}) {
 
     const gmail = google.gmail({version: 'v1', auth: jwtClient});
@@ -67,7 +67,6 @@ async function sendEmail(mailOptions = {from, to, subject, text}) {
             }
         });
         const {data} = res;
-        //console.log("send email data: ", data);
         return data
     } catch (error) {
         console.error("get send email error: ", error);

@@ -31,6 +31,26 @@ AlphaPhi is a server-side application designed to manage user authentication, em
 - **Jest** & **Supertest** (for testing)
 - **Nodemon** (for development)
 
+## Environment Variables
+
+This project uses environment variables to securely manage sensitive configuration and credentials. You must create a `.env` file in the `backend/` directory before running the server. Below are the required environment variables for successful operation:
+### Required Environment Variables
+
+| Variable Name         | Description                                              |
+|----------------------|----------------------------------------------------------|
+| `PORT`               | Port number for the server to listen on                  |
+| `MONGODB_URI`        | MongoDB connection string                                |
+| `JWT_SECRET`         | Secret key for signing JWT tokens                        |
+| `EMAIL_FROM`         | Default sender email address for notifications           |
+| `AWS_ACCESS_KEY_ID`  | AWS access key for SES                                   |
+| `AWS_SECRET_ACCESS_KEY` | AWS secret key for SES                                |
+| `AWS_REGION`         | AWS region for SES                                       |
+| `MAILSLURP_API_KEY`  | API key for MailSlurp (for email testing)                |
+| `NODE_ENV`           | Application environment (`development` or `production`)  |
+
+**Example of `.env` file:** Can be seen, as env.example
+
+
 ## Getting Started
 
 1. Clone the repository.
@@ -85,3 +105,4 @@ AlphaPhi est une application côté serveur conçue pour gérer l'authentificati
    `npm start`
 5. Lancez les tests :  
    `npm test`
+

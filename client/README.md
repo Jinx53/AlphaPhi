@@ -47,9 +47,6 @@ This is the client-side application for the AlphaPhi project. It provides the us
 - `src/` - Main source code for the React application.
 - `public/` - Static files and the HTML template.
 
-### Environment Variables
-
-If your project uses environment variables (e.g., for API endpoints), create a `.env` file in the root directory and add your variables there.
 
 ---
 
@@ -101,8 +98,3 @@ Ceci est l'application côté client du projet AlphaPhi. Elle fournit l'interfac
 
 - `src/` - Code source principal de l'application React.
 - `public/` - Fichiers statiques et le modèle HTML.
-
-### Variables d'Environnement
-
-Si votre projet utilise des variables d'environnement (par exemple pour les points d'accès API), créez un fichier `.env` à la racine et ajoutez-y vos variables.
-
