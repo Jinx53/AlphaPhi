@@ -23,9 +23,12 @@ module.exports = merge(common, {
         open: false,
         hot: true,
         compress: true,
-        proxy: {
-            "*": "http://localhost:5000",
-        },
+        proxy: [{
+            context: ['/alpha-tools', '/alpha-services', '/aboutus', '/contactus', '/resourceteam', '/testimonial', '/subscribers', '/users', '/admin', '/mail'],
+            target: "http://localhost:5050",
+            changeOrigin: true,
+            logLevel: 'debug'
+        }],
         historyApiFallback: true
         
     },
@@ -42,7 +45,6 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-           // filename: "index.html", 
             template: './public/index.html',
             manifest: './manifest.json',
             favicon: './public/favicon.png',
@@ -50,8 +52,8 @@ module.exports = merge(common, {
             
         }),
         new InterpolateHtmlPlugin({
-            PUBLIC_URL: './public'
-            //'NODE_ENV': 'development'
+            PUBLIC_URL: './public',
+            'NODE_ENV': 'development'
         })  
     ]
 });

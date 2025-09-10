@@ -24,8 +24,8 @@ const Contact = ({ description, option, onSubmit, hideEmail, hidePhone, message,
     const [contactSuccess, onContactSuccess] = useState(false);
     const dispatch = useDispatch();
     const { activeContact } = useSelector(state => state.contactus);
-    const defaultEmail = "info@alpha-phimeasurement.com";
-    const defaultPhone = "+23484847775";
+    const defaultEmail = "test@test.com";
+    const defaultPhone = "+351912345678";
     const defaultBody = useServices ? 'We are committed to providing world-class services to support the petro-chemical and mechanical industry by providing them specialized equipment and tools for rent and the most affordable prices. Our services include:' : 'We would love to get your feedback about our products and services. If you have enquiries or need help with any of our services please leave a message. We are here to answer you promptly.';
     const { body, address, phone, email } = activeContact || {};
 
