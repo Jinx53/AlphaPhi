@@ -48,7 +48,7 @@ This project uses environment variables to securely manage sensitive configurati
 | `MAILSLURP_API_KEY`  | API key for MailSlurp (for email testing)                |
 | `NODE_ENV`           | Application environment (`development` or `production`)  |
 
-**Example of `.env` file:** Can be seen, as env.example
+**Example of `.env` file:** Can be seen, as `env.example`
 
 
 ## Getting Started
@@ -94,6 +94,20 @@ AlphaPhi est une application côté serveur conçue pour gérer l'authentificati
 - **CORS**
 - **Jest** & **Supertest** (pour les tests)
 - **Nodemon** (pour le développement)
+
+## Variables d'Environnement
+
+| Nom de la variable         | Description                                              |
+|----------------------|----------------------------------------------------------|
+| `PORT`               | Numéro de port sur lequel le serveur doit écouter                  |
+| `MONGODB_URI`        | Chaîne de connexion MongoDB                                |
+| `JWT_SECRET`         | Clé secrète pour la signature des jetons JWT                        |
+| `EMAIL_FROM`         | Adresse e-mail de l'expéditeur par défaut pour les notifications           |
+| `AWS_ACCESS_KEY_ID`  | Clé d'accès AWS pour SES                                   |
+| `AWS_SECRET_ACCESS_KEY` | Clé secrète AWS pour SES                                |
+| `AWS_REGION`         | Région AWS pour SES                                       |
+| `MAILSLURP_API_KEY`  | Clé API pour MailSlurp (pour les tests d’e-mails)                |
+| `NODE_ENV`           | Environnement de l’application (`développement` ou `production`)  |
 
 ## Pour Commencer
 
